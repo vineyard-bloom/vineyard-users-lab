@@ -1,0 +1,19 @@
+{
+  "name": "vineyard-users-lab",
+  "version": "0.1.0",
+  "description": "Library for testing Vineyard Users",
+  "main": "source/index.js",
+  "types": "source/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git@github.com:vineyard-bloom/vineyard-users-lab.git",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/es6-promise": "0.0.32",
+    "@types/node": "^7.0.5",
+    "source-map-support": "^0.4.14"
+  }
+}
