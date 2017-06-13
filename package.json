@@ -1,6 +1,6 @@
 {
   "name": "vineyard-users-lab",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Library for testing Vineyard Users",
   "main": "source/index.js",
   "types": "source/index.d.ts",
