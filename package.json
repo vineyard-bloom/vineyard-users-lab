@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "vineyard-lawn-lab": "0.1.x",
-    "vineyard-lawn-users": "0.3.x"
+    "vineyard-users": "0.3.x"
   },
   "devDependencies": {
     "@types/es6-promise": "0.0.32",
