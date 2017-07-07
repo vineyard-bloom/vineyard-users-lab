@@ -16,6 +16,7 @@ var UserClient = (function () {
     UserClient.prototype.register = function (user) {
         var _this = this;
         this.password = user.password;
+        user.twoFactorSecret = this.twoFactorSecret;
         return this.prepareTwoFactor()
             .then(function (twoFactorSecret) { return _this.webClient.post('user', user); })
             .then(function (user) { return _this.user = user; });
@@ -29,6 +30,12 @@ var UserClient = (function () {
     };
     UserClient.prototype.logout = function () {
         return this.webClient.post('user/logout');
+    };
+    UserClient.prototype.getWebClient = function () {
+        return this.webClient;
+    };
+    UserClient.prototype.getUser = function () {
+        return this.user;
     };
     return UserClient;
 }());

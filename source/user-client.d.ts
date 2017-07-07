@@ -13,4 +13,6 @@ export declare class UserClient {
     register(user: any): Promise<User>;
     login(): Promise<void>;
     logout(): Promise<void>;
+    getWebClient(): WebClient;
+    getUser(): User;
 }

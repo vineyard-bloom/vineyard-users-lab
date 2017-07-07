@@ -27,6 +27,7 @@ export class UserClient {
 
   register(user: any): Promise<User> {
     this.password = user.password
+    user.twoFactorSecret = this.twoFactorSecret
     return this.prepareTwoFactor()
       .then(twoFactorSecret => this.webClient.post('user', user))
       .then(user => this.user = user)
@@ -42,6 +43,14 @@ export class UserClient {
 
   logout(): Promise<void> {
     return this.webClient.post('user/logout')
+  }
+
+  getWebClient(): WebClient {
+    return this.webClient
+  }
+
+  getUser(): User {
+    return this.user
   }
 
 }
